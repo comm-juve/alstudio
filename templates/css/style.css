@@ -265,7 +265,6 @@ body {
   overflow: hidden;
 }
 .container .content .right_block {
-  position: relative;
   float: left;
   height: 100%;
   width: 42%;
@@ -276,9 +275,8 @@ body {
   text-align: justify;
   text-transform: uppercase;
   text-justify: none;
-  position: absolute;
-  bottom: 0;
-  right: 10px;
+    margin-top: 75%;
+
 }
 .header {
   position: relative;
@@ -371,7 +369,7 @@ body {
     font-size: 17px;
   }
   .container {
-    min-height: 510px;
+      min-height: 540px;
   }
 }
 @media (max-width: 1024px) and (min-width: 500px) {
@@ -379,6 +377,44 @@ body {
     font-size: 16px;
   }
   .container {
-    min-height: 460px;
+      min-height: 540px;
   }
+
+    .container .content .left_block {
+        width: 40%
+    }
+
+    .container .content .right_block {
+        width: 57%;
+    }
+}
+
+/* Clearfix
+================================================*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 100%;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    font-size: 1px;
+    line-height: 0;
+    overflow: hidden;
 }
