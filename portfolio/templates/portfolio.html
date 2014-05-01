@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <div style="display:none;margin: auto;" class="html5gallery" data-skin="light"  data-width="800" data-height="450" >
+                <!-- Add Vimeo video to Gallery -->
+                <a href="http://player.vimeo.com/video/91605331?title=0&amp;byline=0&amp;portrait=0"><img src="images/Big_Buck_Bunny.jpg" alt="Vimeo Video"></a>
+                <a href="http://player.vimeo.com/video/1084537?title=0&amp;byline=0&amp;portrait=0"><img src="images/Big_Buck_Bunny.jpg" alt="Vimeo Video"></a>
+
+
+
+        {% for p in portfolio %}
+            {{ p.video_code| safe }}<img src="images/Big_Buck_Bunny.jpg" alt="Vimeo Video"></a>
+        {% endfor %}
+</div>
+
+{% endblock content %}

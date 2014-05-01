@@ -1,0 +1,44 @@
+.. aistudio documentation master file, created by
+   sphinx-quickstart on Sat Apr 26 00:38:56 2014.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to aistudio's documentation!
+====================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+.. setting:: ADMINS
+
+ADMINS
+------
+
+Default: ``()`` (Empty tuple)
+
+A tuple that lists people who get code error notifications. When
+``DEBUG=False`` and a view raises an exception, Django will email these people
+with the full exception information. Each member of the tuple should be a tuple
+of (Full name, email address). Example::
+
+    (('John', 'john@example.com'), ('Mary', 'mary@example.com'))
+
+Note that Django will email *all* of these people whenever an error happens.
+See :doc:`/index` for more information.
+
+``File.close()``
+~~~~~~~~~~~~~~~~
+
+.. method:: File.close()
+
+Add :mod:`django.contrib.auth` to your :setting:`INSTALLED_APPS`...
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+

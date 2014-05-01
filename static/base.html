@@ -1,0 +1,34 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Handmade</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+{#    <link rel="stylesheet" href="/static"/>#}
+</head>
+<body>
+<div class="frame">
+    <header class="header">
+        <div class="logo"><a href="/"> <img src="{% static 'img/logo.png' %}" alt="AIStudio"/></a></div>
+        <div class="hphone">+7 917 92 98 956</br>
+            +7 917 25 37 403
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    <footer id="footer">
+        <ul class="fmenu">
+            <li><a href="/portfolio">Портфолио</a></li>
+            <li><a href="">О нас</a></li>
+            <li><a href="">Обратная связь</a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>

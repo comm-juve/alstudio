@@ -1,0 +1,409 @@
+/*================================================*/
+/*Reset*/
+/*================================================*/
+html {
+    color: #000;
+    background: #FFF
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, select, p, blockquote, th, td {
+    margin: 0;
+    padding: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset, img {
+    border: 0
+}
+
+address, button, caption, cite, code, dfn, em, input, optgroup, option, select, strong, textarea, th, var {
+    font: inherit
+}
+
+del, ins {
+    text-decoration: none
+}
+
+li {
+    list-style: none
+}
+
+caption, th {
+    text-align: left
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+q:before, q:after {
+    content: ''
+}
+
+abbr, acronym {
+    border: 0;
+    font-variant: normal
+}
+
+sup {
+    vertical-align: baseline
+}
+
+sub {
+    vertical-align: baseline
+}
+
+legend {
+    color: #000
+}
+
+p {
+    margin: 0 0 1.5em 0;
+}
+
+/*================================================*/
+/*Heading*/
+/*================================================*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: @addedColor;
+}
+
+h1 {
+    font-family: Calibri;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 0.75em;
+}
+
+h3 {
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+
+h4 {
+    font-size: 12px;
+    line-height: 1.25;
+    margin-bottom: 1.25em;
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+h6 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h1 img, h2 img, h3 img,
+h4 img, h5 img, h6 img {
+    margin: 0;
+}
+
+/*================================================*/
+/*Lists*/
+/*================================================*/
+
+li ul,
+li ol {
+    margin: 0 1.5em;
+}
+
+ul, ol {
+    margin: 0 1.5em 1.5em 1.5em;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+dl {
+    margin: 0 0 1.5em 0;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 1.5em;
+}
+
+/*================================================*/
+/*Tables*/
+/*================================================*/
+
+table {
+    margin-bottom: 1.4em;
+    width: 100%;
+}
+
+th {
+    font-weight: bold;
+}
+
+thead th {
+    background: #c3d9ff;
+}
+
+th, td, caption {
+    padding: 4px 10px 4px 5px;
+}
+
+tr.even td {
+    background: #e5ecf9;
+}
+
+tfoot {
+    font-style: italic;
+}
+
+caption {
+    background: #eee;
+}
+
+/*================================================*/
+/*SETTINGS*/
+/*================================================*/
+@baseFontFamily: Arial, sans-serif;
+@addedFontFamily: "HELVETICA";
+@baseLink: #867e79;
+@baseColor: #4c4c4c;
+@addedColor: #d55213;
+@baseBg: #867e79;
+@addBg: #ea5924;
+@baseFontSize: 12px;
+@siteWidth: 90%;
+@headerHeight: 105px; //155
+@footerHeight: 180px;
+
+@green: #6abf78;
+
+// Border Radius
+   .border-radius(@radius) {
+                      -webkit-border-radius: @radius;
+                      -moz-border-radius: @radius;
+                      border-radius: @radius;
+                  }
+
+// Single Corner Border Radius
+   .border-top-left-radius(@radius) {
+                               -webkit-border-top-left-radius: @radius;
+                               -moz-border-radius-topleft: @radius;
+                               border-top-left-radius: @radius;
+                           }
+
+.border-top-right-radius(@radius) {
+                             -webkit-border-top-right-radius: @radius;
+                             -moz-border-radius-topright: @radius;
+                             border-top-right-radius: @radius;
+                         }
+
+.border-bottom-right-radius(@radius) {
+                                -webkit-border-bottom-right-radius: @radius;
+                                -moz-border-radius-bottomright: @radius;
+                                border-bottom-right-radius: @radius;
+                            }
+
+.border-bottom-left-radius(@radius) {
+                               -webkit-border-bottom-left-radius: @radius;
+                               -moz-border-radius-bottomleft: @radius;
+                               border-bottom-left-radius: @radius;
+                           }
+
+// Drop shadows
+   .box-shadow(@shadow) {
+                   -webkit-box-shadow: @shadow;
+                   -moz-box-shadow: @shadow;
+                   box-shadow: @shadow;
+               }
+
+//Vertical gradient
+  .verticalGrad(@startColor: #555, @endColor: #333) {
+                    background-color: mix(@startColor, @endColor, 60%);
+                    background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+                background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+                background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+                background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+                background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+                background-repeat: repeat-x;
+                    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor), argb(@endColor))); // IE9 and down
+                }
+
+.size(@width, @height) {
+          width: @width;
+          height: @height;
+      }
+
+// Absolute Position
+   .tlPosition(@top, @left) {
+                   position: absolute;
+                   top: @top;
+                   left: @left;
+               }
+
+.trPosition(@top, @right) {
+                position: absolute;
+                top: @top;
+                right: @right;
+            }
+
+.brPosition(@bottom, @right) {
+                position: absolute;
+                bottom: @bottom;
+                right: @right;
+            }
+
+.drop-shadow (@x: 0px, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+                  -webkit-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+                  -moz-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+                  box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+/* Links
+================================================*/
+a:link {
+  color: @baseLink;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: @baseLink;
+  text-decoration: underline;
+}
+
+a:active {
+  color: @baseLink;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*================================================*/
+/*LAYOUT*/
+/*================================================*/
+
+body {
+  font-family: @baseFontFamily;
+  color: @baseColor;
+  font-size: 12px;
+  background: @baseBg url("/static/img/bg.jpg") top center  no-repeat;
+}
+
+.bg_top {
+  background: url("/static/img/top_menu_bg.png") repeat-x;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.frame {
+  margin: 0 auto;
+  //  padding-top: 30px;
+  width: @siteWidth;
+  min-height: 500px;
+}
+
+.container {
+  height: 600px;
+  padding: 1px 0;
+  background: rgba(255, 255, 255, 0.9);
+//  margin-bottom: @footerHeight;
+  .content{
+    margin: 2%;
+    height: 90%;
+    .left_block{
+      float: left;
+      width: 55%;
+      margin-right: 3%;
+      min-height: 100px;
+    }
+    .right_block{
+      position: relative;
+      float: left;
+      height: 100%;
+      width: 42%;
+      min-height: 100px;
+      .right_block_text{
+        position: absolute;
+        font-size: 20px;
+        text-align: justify;
+        text-transform: uppercase;
+        text-justify: none;
+        .brPosition(0, 10px);
+      }
+    }
+  }
+}
+
+.header{
+  position: relative;
+  height: @headerHeight;
+  .logo{
+    position: absolute;
+    .tlPosition(20px, 0);
+  }
+  .hphone{
+    position: absolute;
+    .brPosition(10px, 0);
+    color: #faed38;
+    font-size: 20px;
+  }
+}
+
+
+
+/*================================================*/
+/*Footer*/
+/*================================================*/
+
+#footer {
+  position: relative;
+  margin: 0 auto 0;
+  height: @footerHeight;
+  padding-left: 1px;
+  color: #e6ccff;
+
+  .fmenu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    li{
+      float: left;
+      .size(180px, 40px); // 225 55
+      line-height: 55px;
+
+      a{
+        display: block;
+        text-align: center;
+        background: #ab3326;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-left: 15px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
